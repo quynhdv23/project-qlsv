@@ -6,22 +6,22 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Table(name = "product")
+@Table(name = "products")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Product {
     @Id
-    @Column(name = "id")
+    @Column(name = "product_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer productId;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "product_name")
+    private String productName;
 
     @Column(name = "price")
-    private float price;
+    private Integer price;
 
 
 }

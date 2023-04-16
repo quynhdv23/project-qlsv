@@ -12,10 +12,10 @@ public class ProductRepositoryImpl extends BaseRepositoryImpl{
         StringBuilder sql=new StringBuilder();
         Map<String, Object> mapParams=new HashMap<>();
         sql.append("""
-                SELECT t.id as product_id,
-                	t.name as product_name,
+                SELECT t.product_id as product_id,
+                	t.product_name as product_name,
                 	t.price as product_price
-                 FROM product t
+                 FROM products t
                 """);
         List<ProductDTO> listData = getListData(sql.toString(), mapParams, ProductDTO.class);
         return listData;
